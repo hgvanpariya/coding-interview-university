@@ -148,6 +148,8 @@ public Node ReverseAlternateNodes(Node head){
 
 Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
 
+<img width="442" alt="Screenshot 2020-07-23 at 3 44 14 PM" src="https://user-images.githubusercontent.com/1458819/88275944-d4f67280-ccfb-11ea-918e-f59ab5a40fb6.png">
+
 #### Solution
 ```java
 class Solution {
