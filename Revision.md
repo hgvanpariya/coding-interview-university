@@ -1,6 +1,80 @@
 
 ## Linked List
 
+### Question : Reverse Link List
+
+Reverse a singly linked list.
+
+Example:
+```
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+```
+
+#### Solution
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        
+        ListNode pre = null;
+        ListNode current = head;
+        ListNode post = head.next;
+        
+        
+        while(current != null){
+            
+            current.next = pre;
+            pre = current;
+            current = post;
+            if(post != null){
+                post = post.next;
+            }
+        }
+        
+        return pre;
+    }
+}
+
+/**
+
+1 2 3 4
+p null
+c 1
+n 2
+
+c-Next = p
+p=c
+c=n
+n=n.next
+
+pre = 3
+c = 4
+post = null
+
+3 4 
+
+c.next = pre (3)
+pre = c (4)
+c = null
+n = null.next
+
+*/
+```
+
 ### Question
 
 Complete the following function-
