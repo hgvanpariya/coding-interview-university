@@ -142,3 +142,109 @@ public Node ReverseAlternateNodes(Node head){
          return head;
     }
 ```
+
+## Other
+### Question : Container With Most Water
+
+Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+
+#### Solution
+```java
+class Solution {
+    public int maxArea(int[] height) {
+        
+        cornerCase(height);
+        
+        int inputLength = height.length -1;
+        int min = 0;
+        int max = inputLength;
+        
+        int maxWaterLevel = 0;
+        int currentLength = inputLength;
+        
+        while(min<max && min >=0 && max <= inputLength){
+            int currentLevel = height[min] < height[max]?height[min]:height[max];
+            int currentWaterCapacity =  currentLevel * currentLength;
+            
+            if(currentWaterCapacity > maxWaterLevel){
+                maxWaterLevel = currentWaterCapacity;
+            }
+            if(height[min] < height[max]){
+                min++;
+            }else{
+                max--;
+            }
+            currentLength--;
+        }
+        
+        return maxWaterLevel;
+        
+    }
+    
+    public void cornerCase(int[] height){
+        if(height == null){
+            throw new IllegalArgumentException("ERR01:");
+        }
+        if(height.length < 2){
+            throw new IllegalArgumentException("ERR02:");
+        }
+    }
+}
+/*
+
+
+testplan
+****************
+[1,1]
+[1,5]
+[5,1]
+
+[1,8,6]
+[8,1,6]
+[6,1,8]
+
+[1]
+[]
+*********************
+
+[1,1] -> 1
+
+[1,5] -> 1
+
+[5,1]  -> 1
+
+[1,8,6] 
+6
+6,8 -> 6
+6,8,1 -> 6
+
+[8,1,6]
+1,6 -> 1
+8,6 -> 6*2
+=12
+
+8,1 => 1
+=1
+
+[6,1,8]
+
+1,8 => 1
+6,1,8 => 6*2
+=12
+
+[1,8,6,2,5,4,8,3,7]
+1,7 -> 8*1
+8,7 -> 7*7 => 49
+
+[6,1,8]
+
+6,8 -> 2*6 => 12
+
+
+
+
+7 -indexOf(8) 
+
+
+**/
+```
