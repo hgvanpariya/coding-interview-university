@@ -1,3 +1,5 @@
+# Table of Contents
+1. [Linked List](#linked-list)
 
 ## Linked List
 
