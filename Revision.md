@@ -67,7 +67,14 @@ queue.poll();
 #### Stack
 
 ```java
+
 Stack stack = new Stack();
+
+stack.add();
+stack.pop();
+
+stack.peek();
+
 ```
 
 ## Linked List
