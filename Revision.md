@@ -1,6 +1,75 @@
 # Table of Contents
 1. [Linked List](#linked-list)
 
+## Data Structure
+
+### Heap
+ Priority Queue in java:
+ 
+ #### Min Heap
+ 
+ ```java
+  // Creating empty priority queue 
+        PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>(); 
+  
+        // Adding items to the pQueue using add() 
+        pQueue.add(10); 
+        pQueue.add(20); 
+        pQueue.add(15); 
+  
+        // Printing the top element of PriorityQueue 
+        System.out.println(pQueue.peek()); 
+        // output: 10
+        
+        // Printing the top element and removing it 
+        // from the PriorityQueue container 
+        System.out.println(pQueue.poll()); 
+        // output : 10
+  
+        // Printing the top element again 
+        System.out.println(pQueue.peek()); 
+        // output : 15
+ ```
+#### Max HEAP
+
+```java
+ // Creating empty priority queue 
+        PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>((a,b)->b-a); 
+  
+        // Adding items to the pQueue using add() 
+        pQueue.add(10); 
+        pQueue.add(20); 
+        pQueue.add(15); 
+  
+        // Printing the top element of PriorityQueue 
+        System.out.println(pQueue.peek()); 
+        //output : 20
+        
+        // Printing the top element and removing it 
+        // from the PriorityQueue container 
+        System.out.println(pQueue.poll()); 
+        //output : 20
+  
+        // Printing the top element again 
+        System.out.println(pQueue.peek()); 
+        //output : 15
+```
+#### Queue
+
+```java
+Queue  queue = new LinkedList();
+
+queue.add(e);
+
+queue.poll();
+```
+
+#### Stack
+
+```java
+Stack stack = new Stack();
+```
+
 ## Linked List
 
 ### Question : Reverse Link List
