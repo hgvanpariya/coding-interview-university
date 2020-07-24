@@ -6,7 +6,7 @@
 ### Heap
  Priority Queue in java:
  
- #### Min Heap
+ #### Min Heap :baby_chick:
  
  ```java
   // Creating empty priority queue 
@@ -88,6 +88,15 @@ Example:
 Input: 1->2->3->4->5->NULL
 Output: 5->4->3->2->1->NULL
 ```
+
+:baby_chick:
+
+| Task |Priority Queue | Queue | Stack | List | Set | HashMap | 
+| --- | ----------- |
+| ADD | add(e) | add(e) | add(e) | add(e) | add(e) | put(k,v) |
+| GET only | peek() | peek() | peek() | get()
+| GET and remove | Text |
+| REMOVE | Text |
 
 #### Solution
 
