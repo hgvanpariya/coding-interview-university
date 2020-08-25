@@ -1,6 +1,10 @@
 # Table of Contents
 1. [Linked List](#linked-list)
 
+## Steps to follow
+### 100 problems to solve
+https://www.hackerearth.com/blog/developers/7-steps-to-improve-your-data-structure-and-algorithm-skills/
+
 ## Data Structure
 
 ### Heap
