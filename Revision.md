@@ -208,6 +208,41 @@ n = null.next
 */
 ```
 
+### Question : Power of Two
+Given an integer, write a function to determine if it is a power of two.
+
+Example 1:
+
+Input: 1
+Output: true 
+Explanation: 20 = 1
+Example 2:
+
+Input: 16
+Output: true
+Explanation: 24 = 16
+Example 3:
+
+Input: 218
+Output: false
+
+#### Solution
+
+```java
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        
+        double pow = 1;
+        
+        while(pow < n){
+            pow *= 2;
+        }
+        
+        return pow == n;
+    }
+}
+```
+
 ### Question
 
 Complete the following function-
